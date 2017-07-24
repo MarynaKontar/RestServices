@@ -13,9 +13,10 @@ public class ServicesStore {
     private static final ServicesStore instance = new ServicesStore();
 
 
+
     Map<String, ParsingUtility.Invocation> getInvocations;
 
-     private ServicesStore(){
+     public ServicesStore(){
         this.getInvocations = new ConcurrentHashMap<>(); // потобезопасная HashMap
          //зарегестрировать сервис
     }

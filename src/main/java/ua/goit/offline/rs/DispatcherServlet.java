@@ -32,7 +32,7 @@ public class DispatcherServlet extends HttpServlet {
 //    resp.getOutputStream().flush();
 
     String path = req.getContextPath();
-    String url = path.replaceAll("/services/","");///services поменяли н апустую строку
+    String url = path.replaceAll("/services/","");///services поменяли на пустую строку
         ParsingUtility.Invocation invocation = ServicesStore.getInstance().getService(url);
 
         Object[] params = new Object[invocation.getParamCount()]; //массив параметров
@@ -47,9 +47,9 @@ public class DispatcherServlet extends HttpServlet {
         //invoke надо на чем то
     }
 
-    Object getService (Class<?> clazz){
-//        throw new UnsupportedOperationException();
-        
-    }
+//    Object getService (Class<?> clazz){
+////        throw new UnsupportedOperationException();
+//
+//    }
 
 }
